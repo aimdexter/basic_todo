@@ -24,18 +24,18 @@ const generateTemplate = todo =>{
 const filterTodos = (term) => {
     //add filtred class to li that does not containt the serached letter
     Array.from(list.children)
-        .filter(todo => !todo.textContent.includes(term))
+        .filter(todo => !todo.textContent.toLowerCase().includes(term))
         .forEach(todo => todo.classList.add('filtred'));
 
     //delete filtred class to li that does not containt the serached letter
      Array.from(list.children)
-        .filter(todo => todo.textContent.includes(term))
+        .filter(todo => todo.textContent.toLowerCase().includes(term))
         .forEach(todo => todo.classList.remove('filtred'));
     };
 
 //search todos keyup event
 search.addEventListener('keyup',() => {
-    const term = search.value.trim();
+    const term = search.value.trim().toLowerCase();
     filterTodos(term);
 })
 
