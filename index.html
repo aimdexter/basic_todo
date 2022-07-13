@@ -1,16 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/01ee4e166d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./public/style.css" />
     <title>Todo</title>
-</head>
+  </head>
 
-<body class="">
-    hi
-</body>
+  <body
+    class="container flex flex-col items-center gap-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+  >
+    <header class="my-4 text-center">
+      <h1 class="mb-4 text-xl font-extrabold">Todo List</h1>
+      <form action="" class="search">
+        <input
+          type="text"
+          name="search"
+          placeholder="search todos"
+          class="form-control block w-[300px] rounded-md border
+           border-stone-600 bg-purple-500 py-2 px-3 shadow-2xl 
+           placeholder:italic placeholder:text-slate-700 focus:border-stone-900 
+           focus:outline-none focus:ring-1 focus:ring-stone-900 sm:text-sm"
+        />
+      </form>
+    </header>
+    <ul
+      class="flex flex-col mx-auto bg-purple-500 rounded-md shadow-2xl list-group todos"
+    >
+      <li
+        class="list-group-item flex w-[300px] items-center justify-between 
+        px-3 py-4"
+      >
+        <span>play mariokart</span>
+        <i class="far fa-trash-alt delete"></i>
+      </li>
+      <li
+        class="list-group-item flex w-[300px] items-center justify-between 
+        border-y-[1px] border-stone-600 px-3 py-4"
+      >
+        <span>defeat ganon in zelda</span>
+        <i class="far fa-trash-alt delete"></i>
+      </li>
+      <li
+        class="list-group-item flex w-[300px] items-center justify-between px-3 py-4"
+      >
+        <span>make a veggie pie</span>
+        <i class="far fa-trash-alt delete"></i>
+      </li>
+    </ul>
 
+    <form class="flex flex-col my-4 text-center add">
+      <label class="mb-2 text-base font-semibold">Add a new todo...</label>
+      <input
+        class="form-control block w-[300px] rounded-md border border-stone-600 
+        bg-purple-500 py-2 px-3 shadow-2xl placeholder:italic focus:border-stone-900 
+        focus:outline-none focus:ring-1 focus:ring-stone-900 sm:text-sm"
+        type="text"
+        name="add"
+      />
+    </form>
+    <script src="./app.js"></script>
+  </body>
 </html>

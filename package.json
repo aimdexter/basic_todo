@@ -2,10 +2,12 @@
   "devDependencies": {
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.12",
     "tailwindcss": "^3.1.6"
   },
   "scripts": {
-    "build": "postcss src/main.css -o public/style.css --watch"
+    "build": "npx tailwindcss -i src/main.css -o public/style.css --watch"
   },
   "dependencies": {
     "postcss-cli": "^10.0.0"
